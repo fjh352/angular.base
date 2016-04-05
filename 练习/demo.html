@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../js/angular.js"></script>
+</head>
+<body>
+<script>
+    var data = [
+        {
+            name: "zky",
+            age: 24
+        },
+        {
+            name: "qin",
+            age: 22
+        },
+        {
+            name: "tr",
+            age: 20
+        }
+    ];
+    var User = {};
+    var Suser = [];
+    angular.forEach(data,function(item){
+          User.name = item.name;
+          User.age = item.age;
+        Suser.push(User);
+    });
+    console.log(Suser);
+</script>
+</body>
+</html>
