@@ -21,8 +21,17 @@ angular.module("myApp",[],["$provide",function($provide){
 		.run(function(){
 			console.log("**执行run");
 		})
-		.controller("controller",["KEY","vension",function(KEY,vension){
+		.factory("factory",function(){
+		return [1,2,3,4,5];
+		})
+		.service("service",function(){
+			return [1,2,3,4,5];
+		})
+		.controller("controller",["KEY","vension","factory","service",function(KEY,vension,factory,service){
 			console.log("**执行controller");
 			console.log("constant注入到controller：",KEY);
 			console.log("value注入到controller：",vension);
-}]);
+			console.log("factory注入到controller：",factory);
+			console.log("service注入到controller：",service);
+}])
+;

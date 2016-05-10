@@ -32,7 +32,7 @@
 			$controllerProvider.register("firstController",["$scope","data",function($scope,data){
 				$scope.data = data;
 			}]);
-	})
+	});
 /*		.filter("filterAge",function(){
 			return function(obj){
 				console.log(obj);
